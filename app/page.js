@@ -1,13 +1,16 @@
 import Link from "next/link";
 import { BsInstagram } from "react-icons/bs";
+import Image from "next/image";
 export default function Home() {
 	return (
 		<div className='flex flex-col items-center mt-5 px-4 cursor-default'>
 			<div className='flex flex-col self-center items-start gap-12'>
-				<img
+				<Image
 					className='self-center rounded-full shadow-xl h-[220px] w-[220px]'
-					src='icon.ico'
-				></img>
+					width={220}
+					height={220}
+					src='/icon.ico'
+				></Image>
 				<div className='flex flex-col max-w-2xl gap-8' id='about'>
 					<h1 className='text-[2em] font-medium underline'>
 						# Gaanu Fans
