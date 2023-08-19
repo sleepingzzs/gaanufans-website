@@ -3,7 +3,7 @@ import { db } from "@/utils/firebase";
 import { useEffect, useState } from "react";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import Post from "@/components/Post";
-export default function explore() {
+export default function Explore() {
 	const [allPosts, setAllPosts] = useState([]);
 
 	const getPosts = async () => {
