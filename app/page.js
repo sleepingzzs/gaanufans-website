@@ -32,8 +32,8 @@ export default function Home() {
 						<li> Posts must be related to Loyola BBSR.</li>
 						<li> File size must be less than 20MB</li>
 						<li>
-							Posts' formats should be in png, jpeg, jpg, and mp4
-							only.
+							Posts&apos; formats should be in png, jpeg, jpg, and
+							mp4 only.
 						</li>
 					</ul>
 				</div>
