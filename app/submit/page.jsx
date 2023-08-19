@@ -6,7 +6,6 @@ import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { addDoc, collection } from "firebase/firestore";
 import { v4 } from "uuid";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react";
 
 export default function Submit() {
 	const route = useRouter();
