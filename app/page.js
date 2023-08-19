@@ -10,6 +10,7 @@ export default function Home() {
 					width={220}
 					height={220}
 					src='/icon.ico'
+					alt='image could not load'
 				></Image>
 				<div className='flex flex-col max-w-2xl gap-8' id='about'>
 					<h1 className='text-[2em] font-medium underline'>
