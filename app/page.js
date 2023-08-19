@@ -37,7 +37,7 @@ export default function Home() {
 						</li>
 					</ul>
 				</div>
-				<ul className='flex self-center gap-2'>
+				<ul className='flex self-center gap-2 mb-5'>
 					<Link href='https://instagram.com/gaanu_fans'>
 						<li className='py-2 px-4 rounded-md border-[#FF4C29] border-2 transition-colors duration-300 ease-in-out hover:bg-[#FF4C29]'>
 							<BsInstagram></BsInstagram>
