@@ -70,7 +70,7 @@ export default function Submit() {
 						className='outline-none bg-white bg-opacity-5 p-1 rounded-md'
 					/>
 					<label htmlFor='caption' className='text-base italic'>
-						*Post's caption
+						*Post&apos; caption
 					</label>
 					<input
 						{...register("caption", {
