@@ -12,6 +12,7 @@ export default function Submit() {
 	const { handleSubmit, register, formState } = useForm();
 	const submitForm = async (values) => {
 		console.log(values);
+		route.push("/explore");
 
 		const memeRef = ref(storage, `memes/${values.meme[0].name + v4()}`);
 
@@ -26,7 +27,6 @@ export default function Submit() {
 			caption: values.caption,
 			meme: downloadUrl,
 		});
-		route.push("/explore");
 	};
 	const { errors } = formState;
 	function RandomNames() {
