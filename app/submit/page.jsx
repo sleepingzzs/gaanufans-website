@@ -105,11 +105,10 @@ export default function Submit() {
 									!(
 										field[0].name.endsWith("jpg") ||
 										field[0].name.endsWith("jpeg") ||
-										field[0].name.endsWith("png") ||
-										field[0].name.endsWith("mp4")
+										field[0].name.endsWith("png")
 									)
 								) {
-									return "*file must be in jpg, jpeg, png, or mp4 formats";
+									return "*file must be in jpg, jpeg, or png formats";
 								} else if (field[0].size >= 15728640) {
 									return "*file size must be less than or equal to 15MB";
 								}

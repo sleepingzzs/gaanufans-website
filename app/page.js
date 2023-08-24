@@ -30,10 +30,10 @@ export default function Home() {
 					</h1>
 					<ul className='list-disc list-inside italic '>
 						<li> Posts must be related to Loyola BBSR.</li>
-						<li> File size must be less than 20MB</li>
+						<li> File size must be less than 20MB.</li>
 						<li>
-							Posts&apos; formats should be in png, jpeg, jpg, and
-							mp4 only.
+							Posts&apos; formats should be in png, jpeg, or jpg
+							only.
 						</li>
 					</ul>
 				</div>
