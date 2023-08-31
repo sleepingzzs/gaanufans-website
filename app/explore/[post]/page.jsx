@@ -16,7 +16,9 @@ export default function Post({ params }) {
 	return (
 		<div className='flex flex-col gap-2 p-2 bg-white bg-opacity-5 rounded-md cursor-pointer mx-auto max-w-md h-[100] my-5'>
 			<ul className='flex flex-row justify-between text-base'>
-				<li className='hover:underline'>@{post.username}</li>
+				<li className='hover:underline'>
+					@{post.username === "" ? "anonymous" : post.username}
+				</li>
 				<li>
 					{new Date(post.timestamp).toLocaleString("en-IN", {
 						day: "2-digit",
@@ -30,7 +32,7 @@ export default function Post({ params }) {
 				className='rounded-md'
 				width={1000}
 				height={1000}
-				src={"" || post.meme}
+				src={post.meme}
 				alt='Could not load image'
 			></Image>
 
