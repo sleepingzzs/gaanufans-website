@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { db } from "@/utils/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
@@ -14,29 +15,34 @@ export default function Post({ params }) {
 	}, []);
 
 	return (
-		<div className='flex flex-col gap-2 p-2 bg-white bg-opacity-5 rounded-md cursor-pointer mx-auto max-w-md h-[100] my-5'>
-			<ul className='flex flex-row justify-between text-base'>
-				<li className='hover:underline'>
-					@{post.username === "" ? "anonymous" : post.username}
-				</li>
-				<li>
-					{new Date(post.timestamp).toLocaleString("en-IN", {
-						day: "2-digit",
-						year: "2-digit",
-						month: "2-digit",
-					})}
-				</li>
-			</ul>
+		<div className='flex flex-col items-center mb-5'>
+			<div className='flex flex-col gap-2 p-2 bg-white bg-opacity-5 rounded-md cursor-pointer mx-auto max-w-md h-[100] my-5'>
+				<ul className='flex flex-row justify-between text-base'>
+					<li className='hover:underline'>
+						@{post.username === "" ? "anonymous" : post.username}
+					</li>
+					<li>
+						{new Date(post.timestamp).toLocaleString("en-IN", {
+							day: "2-digit",
+							year: "2-digit",
+							month: "2-digit",
+						})}
+					</li>
+				</ul>
 
-			<Image
-				className='rounded-md'
-				width={1000}
-				height={1000}
-				src={post.meme}
-				alt='Could not load image'
-			></Image>
+				<Image
+					className='rounded-md'
+					width={1000}
+					height={1000}
+					src={post.meme}
+					alt='Could not load image'
+				></Image>
 
-			<h1>{post.caption}</h1>
+				<h1>{post.caption}</h1>
+			</div>
+			<Link href='/explore'>
+				<h1 className='text-2xl underline '>Go back?</h1>
+			</Link>
 		</div>
 	);
 }
